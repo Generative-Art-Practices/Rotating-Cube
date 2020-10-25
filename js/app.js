@@ -1,3 +1,5 @@
+const randomMin = 0.01;
+const randomMax = 0.05;
 let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera(75, window.innerWidth/ window.innerHeight, 0.1, 1000);
 let renderer = new THREE.WebGLRenderer();
@@ -14,15 +16,19 @@ scene.add(cube);
 camera.position.z = 5;
 
 // Animation loop rendering the scene with camera
-let animate = () =>{
+let animate = () => {
     requestAnimationFrame(animate);
 
     // Rotating the cube
-    cube.rotation.x += 0.02;
-    cube.rotation.y += 0.04;
-    cube.rotation.z += 0.01;
+    cube.rotation.x += getRandomArbitrary(randomMin, randomMax);
+    cube.rotation.y += getRandomArbitrary(randomMin, randomMax);
+    cube.rotation.z += getRandomArbitrary(randomMin, randomMax);
 
     renderer.render(scene, camera);
+}
+
+let getRandomArbitrary = (min, max) => {
+    return Math.random() * (max - min) + min;
 }
 
 animate();
