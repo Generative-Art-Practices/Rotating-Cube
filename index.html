@@ -7,15 +7,50 @@
     <style>
         body {
             margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         canvas {
             display: block;
+            margin: 0 auto;
+        }
+
+        #content{
+            margin-top: 10vh;
+        }
+
+        #description{
+            width: 480px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.6;
+            margin-top: 32px;
+        }
+
+        #description h2{
+            font-size: 26px;
+            margin: 0 0 8px 0;
+        }
+
+        #description p {
+            font-size: 16px;
+            color: #919497;
+            margin: 0;
         }
     </style>
 </head>
 
 <body>
+    <div id="content">
+        <div id="scene"></div>
+        <div id="description">
+            <h2>Rotating Cube</h2>
+            <p>
+                A basic WebGL programme made with Three.js which serves
+                as an entry point into the world of computer graphics for beginners.
+            </p>
+        </div>
+    </div>
     <script src="js/three.js"></script>
     <script src="js/app.js"></script>
     <script>
