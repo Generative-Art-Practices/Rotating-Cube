@@ -16,6 +16,12 @@ camera.position.z = 5;
 // Animation loop rendering the scene with camera
 let animate = () =>{
     requestAnimationFrame(animate);
+
+    // Rotating the cube
+    cube.rotation.x += 0.02;
+    cube.rotation.y += 0.04;
+    cube.rotation.z += 0.01;
+
     renderer.render(scene, camera);
 }
 
