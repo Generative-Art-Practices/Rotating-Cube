@@ -12,7 +12,6 @@ let geometry = new THREE.BoxGeometry();
 let material = new THREE.MeshPhongMaterial({
     color: 0x0000ff,
     flatShading: true,
-    ambient: 0x050505, 
     color: 0x0033ff, 
     specular: 0x555555, 
     shininess: 30
