@@ -15,7 +15,7 @@ let material = new THREE.MeshPhongMaterial({
     color: 0x0033ff, 
     specular: 0x555555, 
     shininess: 30
-  });
+});
 let cube = new THREE.Mesh(geometry, material);
 let light = new THREE.DirectionalLight( 0xffffff );
 
